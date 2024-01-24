@@ -73,7 +73,7 @@ def forward_pass(msgs, bad_words_ids=bad_words_ids):
 if __name__ == "__main__":
     
     # Login to model
-    login("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")
+    login("")
 
     port = 8888
 
