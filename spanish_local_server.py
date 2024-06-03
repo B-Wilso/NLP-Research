@@ -132,7 +132,7 @@ def detect_similarity(unparsed):
 if __name__ == "__main__":
     
     # Login to model
-    login("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")
+    login("")
 
     port = 8888
 
