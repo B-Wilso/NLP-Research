@@ -22,7 +22,7 @@ class LLM:
         - Load bad words or similarity model if they are input
         - Load new random context window
         """
-        login("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")
+        login("")
 
         self.llm = AutoModelForCausalLM.from_pretrained(llm_model,
                                             device_map='auto',
