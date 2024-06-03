@@ -48,8 +48,8 @@ if __name__ == "__main__":
                 # Send question
                 socket.send_string(question)
                 print(f"\n\t[INFO] Sent: '{question}'")
-        except Exception as e:
-            print(f"\n[ERR] Detected error {e}, shutting server down")
+        except KeyboardInterrupt as e:
+            print(f"\n[ERR] Detected user interrupt {e}, shutting server down")
         
         finally:
             print("\n[EXIT] Server shutting down...")

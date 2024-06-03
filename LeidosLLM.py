@@ -43,6 +43,7 @@ class LLM:
     
     def __del__(self):
         """On deletion; logout of huggingface"""
+        print("Deleting OBJ")
         logout()
     
     def __init_agent(self) -> None:
