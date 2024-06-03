@@ -7,6 +7,7 @@ from sentence_transformers import SentenceTransformer, util
 class LLM:
     def __init__(self, 
                  llm_model : str, 
+                 access_token : str,
                  bad_words : list = None,
                  similar_model : str = None, 
                  bnb_config : BitsAndBytesConfig = BitsAndBytesConfig(
@@ -22,7 +23,7 @@ class LLM:
         - Load bad words or similarity model if they are input
         - Load new random context window
         """
-        login("")
+        login(access_token)
 
         self.llm = AutoModelForCausalLM.from_pretrained(llm_model,
                                             device_map='auto',

@@ -23,9 +23,10 @@ if __name__ == "__main__":
         os.system("nvidia-smi")
 
         # Model
-        llm = LLM(llm_model=config.model_desired, 
-                bad_words=config.bad_words, 
-                similar_model=config.similarity_model,
+        llm = LLM(llm_model=config.model_desired,
+                  access_token="",
+                  bad_words=config.bad_words, 
+                  similar_model=config.similarity_model,
                 )
 
         print(f"\n[START-UP] Loaded model and configuration, starting Server on port {config.port}...")
@@ -54,4 +55,3 @@ if __name__ == "__main__":
         finally:
             print("\n[EXIT] Server shutting down...")
             socket.close()
-            
